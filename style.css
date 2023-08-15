@@ -1,0 +1,120 @@
+.container{
+    height: 50vh;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.cowboy{
+    background-color: rgba(85, 143, 230, 0.527);
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid colm span means to start where its meant to start and then span as many columns as we specify right there */
+    grid-column: span 2;
+    
+    /* its short form of 2 properties */
+    /* grid colm start:1
+    grid colm end:3 */
+    /* inspect-slect grid icon in elemnts-take layout-dispaly grid line nos-will show the grid line nos */
+}
+.cid{
+    background-color: blueviolet;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+
+    /* each of the grid items is like a grid container by default have an order of 0,if we elevate the order of one item to 1(or any no>0)
+    then it means that items is going to br the rightmost or bottom most in that grid
+    if order of cow is 2, then order of cid should be greater than 2 for cid to go to the bottom */
+
+    grid-column: span 2;
+
+    /* we can also do the same by speficing row and colm nos
+    grid-col-start:1
+    grid-col-end:3
+     grid-row-start:2
+     grid-row-end:3
+    or use the short hand property- grid-area:2/1/3/3 (grid row start/grid col start/grid row end/ grid col end)
+    but if u use grid area to one item-apply grid area to all for all them to behave as expected
+     */
+    
+}
+.cow{
+    background-color: rgb(129, 199, 89);
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: span 2;
+}
+
+.love{
+    background-color: rgba(85, 143, 230, 0.527);
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1/2/3;
+}
+.eye{
+    background-color: rgba(248, 23, 53, 0.308);
+    /* decrease the opacity to make it transparent */
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/2/3/4;
+}
+.dog{
+    background-color: rgba(71, 145, 11, 0.527);
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 2/1/3/3;
+}
+.container-p{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    width: 700px;
+    margin: 10px auto;
+    
+    
+
+}
+.img1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1/2/3;
+    
+   
+}
+.img2{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/3/3/4;
+    
+   
+    
+    
+
+}
+.img3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 2/1/3/3;
+    
+   
+}
